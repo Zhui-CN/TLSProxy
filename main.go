@@ -24,7 +24,7 @@ var proxies = proxy.FuncToProxy(func(*http.Request) *url.URL {
 })
 
 func BasicUnauthorized(req *http.Request, realm string) *http.Response {
-	// TODO(elazar): verify realm is well formed
+	// TODO verify realm is well formed
 	return &http.Response{
 		StatusCode: 407,
 		ProtoMajor: 1,
